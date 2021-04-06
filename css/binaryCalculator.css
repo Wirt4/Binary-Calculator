@@ -1,0 +1,33 @@
+body{
+    width: 33%;
+}
+
+.resClass{
+    background-color: lightgrey;
+    border: solid;
+    height: 48px;
+    font-size: 20px;
+}
+
+.digitClass{
+    background-color: lightgreen;
+    color: brown;
+}
+
+.clearOrEqualClass{
+    background-color: darkgreen;
+    color: white;
+}
+
+ .mathOperatorsClass{
+    background-color: black;
+    color: red;
+}
+
+button{
+    width: 25%;
+    height: 36px;
+    font-size: 18px;
+    margin:0px;
+    float: left;
+}
