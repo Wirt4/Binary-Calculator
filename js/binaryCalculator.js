@@ -1,10 +1,9 @@
 "use strict";
-
 document.addEventListener('DOMContentLoaded', init, false);
 function init(){
-  function message () {
-    alert("Hello!");
-  }
+  var calc = new Calculator();
+
+
   var one = document.getElementById('btn1');
   var zero = document.getElementById('btn0');
   var c = document.getElementById('btnClr');
@@ -14,12 +13,26 @@ function init(){
   var times = document.getElementById('btnMul');
   var div = document.getElementById('btnDiv');
 
-  one.addEventListener('click', message, true);
-  zero.addEventListener('click', message, true);
-  c.addEventListener('click', message, true);
-  eq.addEventListener('click', message, true);
-  plus.addEventListener('click', message, true);
-  minus.addEventListener('click', message, true);
-  times.addEventListener('click', message, true);
-  div.addEventListener('click', message, true);
+  one.addEventListener('click', calc.setField, true);
+  zero.addEventListener('click', calc.setField, true);
+  c.addEventListener('click', calc.clearField, true);
+  eq.addEventListener('click', calc.setField, true);
+  plus.addEventListener('click', calc.setField, true);
+  minus.addEventListener('click', calc.setField, true);
+  times.addEventListener('click', calc.setField, true);
+  div.addEventListener('click', calc.setField, true);
 };
+
+//can't import class from other file, will have it here
+
+class Calculator{
+  
+  setField() {
+    document.getElementById('res').innerHTML = "Greetings Program";
+  }
+
+  clearField(){
+    document.getElementById('res').innerHTML = "";
+    }
+};
+
