@@ -142,21 +142,19 @@
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
 <a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -232,8 +230,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
 //document.addEventListener('DOMContentLoaded', init, false);
 //function init() {
-&nbsp;
-window.onload=<span class="fstat-no" title="function not covered" >fu</span>nction(){
+  document.addEventListener('DOMContentLoaded', init, false);
+function <span class="fstat-no" title="function not covered" >init </span>(){
   const one = <span class="cstat-no" title="statement not covered" >document.getElementById('btn1');</span>
   const zero = <span class="cstat-no" title="statement not covered" >document.getElementById('btn0');</span>
   const c = <span class="cstat-no" title="statement not covered" >document.getElementById('btnClr');</span>
@@ -242,16 +240,15 @@ window.onload=<span class="fstat-no" title="function not covered" >fu</span>ncti
   const minus = <span class="cstat-no" title="statement not covered" >document.getElementById('btnSub');</span>
   const times = <span class="cstat-no" title="statement not covered" >document.getElementById('btnMul');</span>
   const div = <span class="cstat-no" title="statement not covered" >document.getElementById('btnDiv');</span>
-//}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  one.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.setField())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  zero.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.setField())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  c.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.clearField())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  eq.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.setField())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  plus.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.setField())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  minus.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.setField())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  times.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.setField())</span>;</span>
-<span class="cstat-no" title="statement not covered" >  div.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >calc.setField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  one.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  zero.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  c.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >clearField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  eq.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  plus.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >csetField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  minus.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  times.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setField())</span>;</span>
+<span class="cstat-no" title="statement not covered" >  div.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setField())</span>;</span>
 };
 //};
 &nbsp;
@@ -322,7 +319,7 @@ export function bMul(a, b){
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Apr 06 2021 10:58:11 GMT-0700 (Pacific Daylight Time)
+                at Tue Apr 06 2021 16:35:50 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>

@@ -1,8 +1,8 @@
 "use strict";
 //document.addEventListener('DOMContentLoaded', init, false);
 //function init() {
-
-window.onload=function(){
+  document.addEventListener('DOMContentLoaded', init, false);
+function init (){
   const one = document.getElementById('btn1');
   const zero = document.getElementById('btn0');
   const c = document.getElementById('btnClr');
