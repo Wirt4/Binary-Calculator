@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1617687060357" clover="3.2.0">
+  <project timestamp="1617687060358" name="All files">
+    <metrics statements="21" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="1" elements="33" coveredelements="3" complexity="0" loc="21" ncloc="21" packages="1" files="1" classes="1"/>
+    <file name="binaryCalculator.js" path="/Users/wirtsalthouse/JSProjects/HackerRank10Days/Binary-Calculator/Binary-Calculator/js/binaryCalculator.js">
+      <metrics statements="21" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -25,29 +25,17 @@ function init(){
 
 //can't import class from other file, will have it here
 
-class Calculator{
-  constructor(){
-    this.buffer = new BinaryNum();
-    this.display = "";
+  export function decimalToBinary(dec){
+    //stub
+    return 11;
   }
 
-  setField() {
+  function setField() {
     document.getElementById('res').innerHTML = "Greetings Program";
   }
 
-  clearField(){
-    this.buffer = new BinaryNum();
-    this.display ="";
+  function clearField(){
     document.getElementById('res').innerHTML = this.display;
     }
-};
 
-class BinaryNum{
-  constructor(){
-    this.rep="";
-    this.value = 0;
-  }
-
-  
-}
 

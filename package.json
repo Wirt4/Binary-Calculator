@@ -1,0 +1,23 @@
+{
+  "name": "Binary-Calculator",
+  "version": "1.0.0",
+  "description": "A project for Binary Calculator problem as part of HackerRanks' 10 Days of Code https://www.hackerrank.com/challenges/js10-binary-calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+"type": "module",
+"jest": {
+    "collectCoverage": true
+  },
+"keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wirt4/Binary-Calculator/issues"
+  },
+  "homepage": "https://github.com/Wirt4/Binary-Calculator#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
