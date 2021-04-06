@@ -72,10 +72,22 @@ describe("testing multiplication", () => {
   });
 
   test("42x54 == 2268", () => {
-    expect(bMul(110110, 110010)).toEqual(100011011100);
+    expect(bMul(101010, 110110)).toEqual(100011011100);
   });
   test("1x42 == 42", () => {
     expect(bMul(1, 110010)).toEqual(110010);
   });
 
+});
+
+describe("Add value to field", () => {
+  test("put binary value of 47 on screen when 1 is clicked", () => {
+    document.body.innerHTML = `<div id = 'res' class='resClass'></div> <div id = 'btns'>
+    <button id='btn1' class='digitClass'>1</button></div>`;
+    const fortySeven = "101111";
+    const one= document.getElementById('btn1');
+    const screen = document.getElementById('res');
+    one.click();
+    expect(screen.innerHTML).toBe(fortySeven);
+  });
 });

@@ -1,9 +1,8 @@
 "use strict";
-document.addEventListener('DOMContentLoaded', init, false);
-function init() {
-  const calc = new Calculator();
+//document.addEventListener('DOMContentLoaded', init, false);
+//function init() {
 
-
+window.onload=function(){
   const one = document.getElementById('btn1');
   const zero = document.getElementById('btn0');
   const c = document.getElementById('btnClr');
@@ -13,15 +12,16 @@ function init() {
   const times = document.getElementById('btnMul');
   const div = document.getElementById('btnDiv');
 
-  one.addEventListener('click', () => calc.setField());
-  zero.addEventListener('click', () => calc.setField());
-  c.addEventListener('click', () => calc.clearField());
-  eq.addEventListener('click', () => calc.setField());
-  plus.addEventListener('click', () => calc.setField());
-  minus.addEventListener('click', () => calc.setField());
-  times.addEventListener('click', () => calc.setField());
-  div.addEventListener('click', () => calc.setField());
+  one.addEventListener('click', () => setField());
+  zero.addEventListener('click', () => setField());
+  c.addEventListener('click', () => clearField());
+  eq.addEventListener('click', () => setField());
+  plus.addEventListener('click', () => csetField());
+  minus.addEventListener('click', () => setField());
+  times.addEventListener('click', () => setField());
+  div.addEventListener('click', () => setField());
 };
+//};
 
 //assumes both a and b are binary numbers
 
