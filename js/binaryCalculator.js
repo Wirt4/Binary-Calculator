@@ -23,13 +23,20 @@ function init() {
   div.addEventListener('click', () => calc.setField());
 };
 
-//can't import class from other file, will have it here
+//assumes both a and b are binary numbers
+
+export function bAdd(a, b){
+  const decA = binaryToDecimal(a);
+  const decB = binaryToDecimal(b);
+  return decimalToBinary(decA + decB);
+}
+
 
 export function decimalToBinary(dec) {
   if (dec >= 0 && Math.floor(dec) == dec) {
     let rep = "";
     while (dec > 0) {
-      rep += dec % 2;
+      rep = dec % 2 + rep;
       dec = Math.floor(dec / 2);
     }
     return Number(rep);
@@ -44,6 +51,7 @@ export function binaryToDecimal(bin) {
     let pow = 0;
     while (bin > 0) {
       let place = bin % 10;
+      if (place>2) return -1;
       bin = Math.floor(bin / 10);
       res += place * 2 ** pow;
       pow++;
@@ -52,13 +60,22 @@ export function binaryToDecimal(bin) {
   }
   return -1;
 }
+//subtracts b from a
+export function bSub(a, b){
+  if (a>b){
+    const decA = binaryToDecimal(a);
+    const decB = binaryToDecimal(b);
+    return decimalToBinary(decA - decB);
+  }
+  return 0;
+}
 
 function setField() {
   document.getElementById('res').innerHTML = "Greetings Program";
 }
 
 function clearField() {
-  document.getElementById('res').innerHTML = this.display;
+  document.getElementById('res').innerHTML = "";
 }
 
 
