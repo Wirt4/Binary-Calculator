@@ -1,6 +1,6 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', init, false);
-function init(){
+function init() {
   const calc = new Calculator();
 
 
@@ -25,17 +25,40 @@ function init(){
 
 //can't import class from other file, will have it here
 
-  export function decimalToBinary(dec){
-    //stub
-    return 11;
-  }
-
-  function setField() {
-    document.getElementById('res').innerHTML = "Greetings Program";
-  }
-
-  function clearField(){
-    document.getElementById('res').innerHTML = this.display;
+export function decimalToBinary(dec) {
+  if (dec >= 0 && Math.floor(dec) == dec) {
+    let rep = "";
+    while (dec > 0) {
+      rep += dec % 2;
+      dec = Math.floor(dec / 2);
     }
+    return Number(rep);
+  }
+  return -1;
+}
+
+export function binaryToDecimal(bin) {
+  bin = Number(bin); //to remove leading zeroes
+  if (bin >= 0 && Math.floor(bin) == bin) {
+    let res = 0;
+    let pow = 0;
+    while (bin > 0) {
+      let place = bin % 10;
+      bin = Math.floor(bin / 10);
+      res += place * 2 ** pow;
+      pow++;
+    }
+    return res;
+  }
+  return -1;
+}
+
+function setField() {
+  document.getElementById('res').innerHTML = "Greetings Program";
+}
+
+function clearField() {
+  document.getElementById('res').innerHTML = this.display;
+}
 
 
