@@ -1,5 +1,6 @@
 //remember need to import {function header} from "./scriptsrc";
 import {decimalToBinary, binaryToDecimal, bAdd, bSub} from "../js/binaryCalculator";
+import {bMul} from "../js/binaryCalculator";
 describe("testing decimal to binary", () => {
   test("endow binary number object with 3, expect to get 11", () => {
     expect(decimalToBinary(3)).toEqual(11);
@@ -59,4 +60,22 @@ describe("testing subtraction", () => {
   test("too large subtraction, output is printed, so graceful fail", () => {
     expect(bSub(1101, 1101000)).toEqual(0);
   });
+});
+
+describe("testing multiplication", () => {
+  test("3x3 == 9", () => {
+    expect(bMul(11, 11)).toEqual(1001);
+  });
+
+  test("0x42 == 0", () => {
+    expect(bMul(110010, 0)).toEqual(0);
+  });
+
+  test("42x54 == 2268", () => {
+    expect(bMul(110110, 110010)).toEqual(100011011100);
+  });
+  test("1x42 == 42", () => {
+    expect(bMul(1, 110010)).toEqual(110010);
+  });
+
 });

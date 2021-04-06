@@ -78,4 +78,8 @@ function clearField() {
   document.getElementById('res').innerHTML = "";
 }
 
-
+export function bMul(a, b){
+  const decA = binaryToDecimal(a);
+  const decB = binaryToDecimal(b);
+  return decimalToBinary(decA * decB);
+}
