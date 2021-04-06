@@ -1,26 +1,26 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', init, false);
 function init(){
-  var calc = new Calculator();
+  const calc = new Calculator();
 
 
-  var one = document.getElementById('btn1');
-  var zero = document.getElementById('btn0');
-  var c = document.getElementById('btnClr');
-  var eq = document.getElementById('btnEql');
-  var plus = document.getElementById('btnSum');
-  var minus = document.getElementById('btnSub');
-  var times = document.getElementById('btnMul');
-  var div = document.getElementById('btnDiv');
+  const one = document.getElementById('btn1');
+  const zero = document.getElementById('btn0');
+  const c = document.getElementById('btnClr');
+  const eq = document.getElementById('btnEql');
+  const plus = document.getElementById('btnSum');
+  const minus = document.getElementById('btnSub');
+  const times = document.getElementById('btnMul');
+  const div = document.getElementById('btnDiv');
 
-  one.addEventListener('click', calc.setField, true);
-  zero.addEventListener('click', calc.setField, true);
-  c.addEventListener('click', calc.clearField, true);
-  eq.addEventListener('click', calc.setField, true);
-  plus.addEventListener('click', calc.setField, true);
-  minus.addEventListener('click', calc.setField, true);
-  times.addEventListener('click', calc.setField, true);
-  div.addEventListener('click', calc.setField, true);
+  one.addEventListener('click', () => calc.setField());
+  zero.addEventListener('click', () => calc.setField());
+  c.addEventListener('click', () => calc.clearField());
+  eq.addEventListener('click', () => calc.setField());
+  plus.addEventListener('click', () => calc.setField());
+  minus.addEventListener('click', () => calc.setField());
+  times.addEventListener('click', () => calc.setField());
+  div.addEventListener('click', () => calc.setField());
 };
 
 //can't import class from other file, will have it here
@@ -28,7 +28,7 @@ function init(){
 class Calculator{
   constructor(){
     this.buffer = new BinaryNum();
-    this.display ="";
+    this.display = "";
   }
 
   setField() {
@@ -47,5 +47,7 @@ class BinaryNum{
     this.rep="";
     this.value = 0;
   }
+
+  
 }
 
