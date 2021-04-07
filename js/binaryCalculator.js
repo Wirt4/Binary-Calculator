@@ -2,9 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', init, false);
 
-function init(){
- 
-  const calc = new Calculator();
+function init() {
+
   var one = document.getElementById('btn1');
   var zero = document.getElementById('btn0');
   var c = document.getElementById('btnClr');
@@ -14,78 +13,75 @@ function init(){
   var times = document.getElementById('btnMul');
   var div = document.getElementById('btnDiv');
 
-  one.addEventListener('click', calc.putOne, true);
-  zero.addEventListener('click', calc.putZero, true);
-  c.addEventListener('click', calc.clear, true);
-  eq.addEventListener('click', calc.setEq, true);
-  plus.addEventListener('click', calc.setAdd, true);
-  minus.addEventListener('click', calc.message, true);
-  times.addEventListener('click', calc.message, true);
-  div.addEventListener('click', calc.message, true);
+  one.addEventListener('click', putOne, true);
+  zero.addEventListener('click', putZero, true);
+  c.addEventListener('click', clear, true);
+  eq.addEventListener('click', setEq, true);
+  plus.addEventListener('click', setAdd, true);
+  minus.addEventListener('click', message, true);
+  times.addEventListener('click', message, true);
+  div.addEventListener('click', message, true);
+
 
 };
 
-//turn export ON for unit testing and OFF for user testing
-//have to hard code the document element ids for some reason
-export class Calculator{
-  
-  constructor(){
-    this.overwrite = false;
-    this.buffer="";
-    this.opMode = {
-      ADDITION: "+",
-      SUBTRACTION: "-",
-      MULTIPLICATION: "*",
-      DIVISION: "/",
-    }
-    this.mode =this.opMode.NONE;
-  }
-  
-  putOne(){
-   this.put("1");
-  }
+let overwrite = false;
+let buffer = "";
+const opMode = {
+  ADDITION: "+",
+  SUBTRACTION: "-",
+  MULTIPLICATION: "*",
+  DIVISION: "/",
+};
+let mode = opMode.NONE;
 
-  putZero(){
-    this.put("0");
-  }
 
-  put(digit){
-    if (this.overwrite){
-      document.getElementById('res').innerHTML= "";
-      this.overwrite = false;
-    }
-    document.getElementById('res').innerHTML += digit;
-  }
+function putOne() {
+  put("1");
+};
 
-  message () {
-    document.getElementById('res').innerHTML= "hello";
-  }
+function putZero() {
+  put("0");
+};
 
-  clear(){
-    this.mode = this.opMode.NONE;
-    this.buffer="";
-    document.getElementById('res').innerHTML= "";
-  }
+function put(digit) {
+  if (overwrite) {
+    document.getElementById('res').innerHTML = "";
+    overwrite = false;
+  };
+  document.getElementById('res').innerHTML += digit;
+};
 
-  setAdd(){
-    this.buffer = document.getElementById('res').innerHTML;
-    this.mode = this.opMode.ADDITION;
-    this.overwrite = true;
-  }
+function message() {
+  document.getElementById('res').innerHTML = "hello";
+};
 
-  setEq(){
-    const opOne = parseInt(this.buffer, 2);
-    const opTwo = parseInt(document.getElementById('res').innerHTML, 2);
-    switch (this.mode) {
-      case this.opMode.ADDITION:
-        let sum = opOne + opTwo;
-        document.getElementById('res').innerHTML = sum.toString(2);
-      case this.opMode.SUBTRACTION:
-      //stub
-      case this.opMode.MULTIPLICATION:
-      //stub
-      case this.opMode.DIVISION:
-      //stub
-    }
-  }
-}
+function clear() {
+  mode = opMode.NONE;
+  buffer = "";
+  document.getElementById('res').innerHTML = "";
+};
+
+function setAdd() {
+  buffer = document.getElementById('res').innerHTML;
+  mode = opMode.ADDITION;
+  overwrite = true;
+};
+
+function setEq() {
+  const opOne = parseInt(buffer, 2);
+  const opTwo = parseInt(document.getElementById('res').innerHTML, 2);
+  switch (mode) {
+    case opMode.ADDITION:
+      let sum = opOne + opTwo;
+      document.getElementById('res').innerHTML = sum.toString(2);
+    case opMode.SUBTRACTION:
+    //stub
+    case opMode.MULTIPLICATION:
+    //stub
+    case opMode.DIVISION:
+    //stub
+  };
+};
+//for testing
+export { putOne, putZero, setAdd, setEq, clear, message };

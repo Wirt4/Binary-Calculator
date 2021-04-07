@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.5% </span>
+                <span class="strong">58.97% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/40</span>
+                <span class='fraction'>23/39</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.89% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.5% </span>
+                <span class="strong">58.97% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>23/40</span>
+                <span class='fraction'>23/39</span>
             </div>
         
             
@@ -144,10 +144,7 @@
 <a name='L85'></a><a href='#L85'>85</a>
 <a name='L86'></a><a href='#L86'>86</a>
 <a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a>
-<a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,7 +158,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -175,19 +171,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -237,13 +229,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
 &nbsp;
 document.addEventListener('DOMContentLoaded', init, false);
 &nbsp;
-function <span class="fstat-no" title="function not covered" >init(</span>){
- 
-  const calc = <span class="cstat-no" title="statement not covered" >new Calculator();</span>
+function <span class="fstat-no" title="function not covered" >init(</span>) {
+&nbsp;
   var one = <span class="cstat-no" title="statement not covered" >document.getElementById('btn1');</span>
   var zero = <span class="cstat-no" title="statement not covered" >document.getElementById('btn0');</span>
   var c = <span class="cstat-no" title="statement not covered" >document.getElementById('btnClr');</span>
@@ -253,88 +246,86 @@ function <span class="fstat-no" title="function not covered" >init(</span>){
   var times = <span class="cstat-no" title="statement not covered" >document.getElementById('btnMul');</span>
   var div = <span class="cstat-no" title="statement not covered" >document.getElementById('btnDiv');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  one.addEventListener('click', calc.putOne, true);</span>
-<span class="cstat-no" title="statement not covered" >  zero.addEventListener('click', calc.putZero, true);</span>
-<span class="cstat-no" title="statement not covered" >  c.addEventListener('click', calc.clear, true);</span>
-<span class="cstat-no" title="statement not covered" >  eq.addEventListener('click', calc.setEq, true);</span>
-<span class="cstat-no" title="statement not covered" >  plus.addEventListener('click', calc.setAdd, true);</span>
-<span class="cstat-no" title="statement not covered" >  minus.addEventListener('click', calc.message, true);</span>
-<span class="cstat-no" title="statement not covered" >  times.addEventListener('click', calc.message, true);</span>
-<span class="cstat-no" title="statement not covered" >  div.addEventListener('click', calc.message, true);</span>
+<span class="cstat-no" title="statement not covered" >  one.addEventListener('click', putOne, true);</span>
+<span class="cstat-no" title="statement not covered" >  zero.addEventListener('click', putZero, true);</span>
+<span class="cstat-no" title="statement not covered" >  c.addEventListener('click', clear, true);</span>
+<span class="cstat-no" title="statement not covered" >  eq.addEventListener('click', setEq, true);</span>
+<span class="cstat-no" title="statement not covered" >  plus.addEventListener('click', setAdd, true);</span>
+<span class="cstat-no" title="statement not covered" >  minus.addEventListener('click', message, true);</span>
+<span class="cstat-no" title="statement not covered" >  times.addEventListener('click', message, true);</span>
+<span class="cstat-no" title="statement not covered" >  div.addEventListener('click', message, true);</span>
+&nbsp;
 &nbsp;
 };
 &nbsp;
-//turn export ON for unit testing and OFF for user testing
-//have to hard code the document element ids for some reason
-export class Calculator{
-  
-  constructor(){
-    this.overwrite = false;
-    this.buffer="";
-    this.opMode = {
-      ADDITION: "+",
-      SUBTRACTION: "-",
-      MULTIPLICATION: "*",
-      DIVISION: "/",
-    }
-    this.mode =this.opMode.NONE;
-  }
-  
-  putOne(){
-   this.put("1");
-  }
+let overwrite = false;
+let buffer = "";
+const opMode = {
+  ADDITION: "+",
+  SUBTRACTION: "-",
+  MULTIPLICATION: "*",
+  DIVISION: "/",
+};
+let mode = opMode.NONE;
 &nbsp;
-  putZero(){
-    this.put("0");
-  }
 &nbsp;
-  put(digit){
-    if (this.overwrite){
-      document.getElementById('res').innerHTML= "";
-      this.overwrite = false;
-    }
-    document.getElementById('res').innerHTML += digit;
-  }
+function putOne() {
+  put("1");
+};
 &nbsp;
-  message () {
-    document.getElementById('res').innerHTML= "hello";
-  }
+function putZero() {
+  put("0");
+};
 &nbsp;
-  clear(){
-    this.mode = this.opMode.NONE;
-    this.buffer="";
-    document.getElementById('res').innerHTML= "";
-  }
+function put(digit) {
+  if (overwrite) {
+    document.getElementById('res').innerHTML = "";
+    overwrite = false;
+  };
+  document.getElementById('res').innerHTML += digit;
+};
 &nbsp;
-  setAdd(){
-    this.buffer = document.getElementById('res').innerHTML;
-    this.mode = this.opMode.ADDITION;
-    this.overwrite = true;
-  }
+function message() {
+  document.getElementById('res').innerHTML = "hello";
+};
 &nbsp;
-  setEq(){
-    const opOne = parseInt(this.buffer, 2);
-    const opTwo = parseInt(document.getElementById('res').innerHTML, 2);
-    switch (this.mode) {
-      case this.opMode.ADDITION:
-        let sum = opOne + opTwo;
-        document.getElementById('res').innerHTML = sum.toString(2);
-      case this.opMode.SUBTRACTION:
-      //stub
-      case this.opMode.MULTIPLICATION:
-      //stub
-      case this.opMode.DIVISION:
-      //stub
-    }
-  }
-}</pre></td></tr></table></pre>
+function clear() {
+  mode = opMode.NONE;
+  buffer = "";
+  document.getElementById('res').innerHTML = "";
+};
+&nbsp;
+function setAdd() {
+  buffer = document.getElementById('res').innerHTML;
+  mode = opMode.ADDITION;
+  overwrite = true;
+};
+&nbsp;
+function setEq() {
+  const opOne = parseInt(buffer, 2);
+  const opTwo = parseInt(document.getElementById('res').innerHTML, 2);
+  switch (mode) {
+    case opMode.ADDITION:
+      let sum = opOne + opTwo;
+      document.getElementById('res').innerHTML = sum.toString(2);
+    case opMode.SUBTRACTION:
+    //stub
+    case opMode.MULTIPLICATION:
+    //stub
+    case opMode.DIVISION:
+    //stub
+  };
+};
+//for testing
+export { putOne, putZero, setAdd, setEq, clear, message };
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Apr 06 2021 21:35:22 GMT-0700 (Pacific Daylight Time)
+                at Tue Apr 06 2021 22:01:31 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>
