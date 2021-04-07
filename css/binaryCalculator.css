@@ -3,6 +3,8 @@ body{
 }
 
 .resClass{
+    /*may have to remove text align for hackerrank if confuses functionality*/
+    text-align:right;
     background-color: lightgrey;
     border: solid;
     height: 48px;

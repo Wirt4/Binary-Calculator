@@ -56,3 +56,47 @@ describe("digit entry", () => {
     expect(scrn.innerHTML).toBe('0');
   });
 });
+
+describe("Addition mimicking button presses as much as possible", () => {
+  test("adding two and two ", () => {
+    const calc = new Calculator();
+    document.body.innerHTML = " <div id='res'></div><div>";
+    const scrn = document.getElementById('res');
+    calc.putOne();
+    calc.putZero();
+    calc.setAdd();
+    calc.putOne();
+    calc.putZero();
+    calc.setEq();
+    expect(scrn.innerHTML).toBe('100');
+  });
+
+  test("adding 42 and 38 ", () => {
+    //101010 + 100110 = 1010000
+    const calc = new Calculator();
+    document.body.innerHTML = " <div id='res'></div><div>";
+    const scrn = document.getElementById('res');
+    //entering binary for 42
+    calc.putOne();
+    calc.putZero();
+    calc.putOne();
+    calc.putZero();
+    calc.putOne();
+    calc.putZero();
+
+    calc.setAdd();
+    calc.putOne();
+    calc.putZero();
+    calc.putZero();
+    calc.putOne();
+    calc.putOne();
+    calc.putZero();
+    calc.setEq();
+    expect(scrn.innerHTML).toBe('1010000');
+  });
+
+  test("dividing by zero ", () => {
+    //stub
+  });
+
+});
