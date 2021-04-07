@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617767084947" clover="3.2.0">
-  <project timestamp="1617767084948" name="All files">
+<coverage generated="1617770122980" clover="3.2.0">
+  <project timestamp="1617770122981" name="All files">
     <metrics statements="40" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="9" coveredmethods="8" elements="55" coveredelements="37" complexity="0" loc="40" ncloc="40" packages="1" files="1" classes="1"/>
     <file name="binaryCalculator.js" path="/Users/wirtsalthouse/JSProjects/HackerRank10Days/Binary-Calculator/Binary-Calculator/js/binaryCalculator.js">
       <metrics statements="40" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="9" coveredmethods="8"/>
@@ -22,28 +22,28 @@
       <line num="22" count="0" type="stmt"/>
       <line num="23" count="0" type="stmt"/>
       <line num="24" count="0" type="stmt"/>
-      <line num="32" count="7" type="stmt"/>
       <line num="33" count="7" type="stmt"/>
       <line num="34" count="7" type="stmt"/>
-      <line num="40" count="7" type="stmt"/>
-      <line num="44" count="17" type="stmt"/>
-      <line num="48" count="9" type="stmt"/>
-      <line num="52" count="26" type="cond" truecount="2" falsecount="0"/>
-      <line num="53" count="2" type="stmt"/>
+      <line num="35" count="7" type="stmt"/>
+      <line num="41" count="7" type="stmt"/>
+      <line num="45" count="17" type="stmt"/>
+      <line num="49" count="9" type="stmt"/>
+      <line num="53" count="26" type="cond" truecount="2" falsecount="0"/>
       <line num="54" count="2" type="stmt"/>
-      <line num="56" count="26" type="stmt"/>
+      <line num="55" count="2" type="stmt"/>
+      <line num="57" count="26" type="stmt"/>
       <line num="61" count="1" type="stmt"/>
-      <line num="64" count="3" type="stmt"/>
       <line num="65" count="3" type="stmt"/>
       <line num="66" count="3" type="stmt"/>
-      <line num="70" count="2" type="stmt"/>
+      <line num="67" count="3" type="stmt"/>
       <line num="71" count="2" type="stmt"/>
       <line num="72" count="2" type="stmt"/>
-      <line num="76" count="2" type="stmt"/>
+      <line num="73" count="2" type="stmt"/>
       <line num="77" count="2" type="stmt"/>
-      <line num="78" count="2" type="cond" truecount="4" falsecount="0"/>
-      <line num="80" count="2" type="stmt"/>
+      <line num="78" count="2" type="stmt"/>
+      <line num="79" count="2" type="cond" truecount="4" falsecount="0"/>
       <line num="81" count="2" type="stmt"/>
+      <line num="82" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>

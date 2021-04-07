@@ -27,7 +27,7 @@ function init(){
 
 //turn export ON for unit testing and OFF for user testing
 //have to hard code the document element ids for some reason
-class Calculator{
+export class Calculator{
   
   constructor(){
     this.overwrite = false;

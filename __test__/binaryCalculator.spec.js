@@ -95,8 +95,4 @@ describe("Addition mimicking button presses as much as possible", () => {
     expect(scrn.innerHTML).toBe('1010000');
   });
 
-  test("dividing by zero ", () => {
-    //stub
-  });
-
 });
