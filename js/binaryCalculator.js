@@ -1,87 +1,50 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', init, false);
-
-function init() {
-
-  var one = document.getElementById('btn1');
-  var zero = document.getElementById('btn0');
-  var c = document.getElementById('btnClr');
-  var eq = document.getElementById('btnEql');
-  var plus = document.getElementById('btnSum');
-  var minus = document.getElementById('btnSub');
-  var times = document.getElementById('btnMul');
-  var div = document.getElementById('btnDiv');
-
-  one.addEventListener('click', putOne, true);
-  zero.addEventListener('click', putZero, true);
-  c.addEventListener('click', clear, true);
-  eq.addEventListener('click', setEq, true);
-  plus.addEventListener('click', setAdd, true);
-  minus.addEventListener('click', message, true);
-  times.addEventListener('click', message, true);
-  div.addEventListener('click', message, true);
-
-
+/**
+function message() {
+  document.getElementById('res').innerHTML = "hello";
 };
-
-let overwrite = false;
-let buffer = "";
-const opMode = {
-  ADDITION: "+",
-  SUBTRACTION: "-",
-  MULTIPLICATION: "*",
-  DIVISION: "/",
-};
-let mode = opMode.NONE;
-
-
+*/
 function putOne() {
   put("1");
+  //document.getElementById('res').innerHTML += "1";
 };
 
 function putZero() {
   put("0");
+  //document.getElementById('res').innerHTML += "0";
 };
 
-function put(digit) {
-  if (overwrite) {
-    document.getElementById('res').innerHTML = "";
-    overwrite = false;
-  };
-  document.getElementById('res').innerHTML += digit;
-};
-
-function message() {
-  document.getElementById('res').innerHTML = "hello";
-};
-
-function clear() {
-  mode = opMode.NONE;
-  buffer = "";
+function clearField() {
   document.getElementById('res').innerHTML = "";
 };
 
-function setAdd() {
-  buffer = document.getElementById('res').innerHTML;
-  mode = opMode.ADDITION;
-  overwrite = true;
+function putAdd() {
+  put("+");
+  //document.getElementById('res').innerHTML += "+";
+};
+
+function put(digit) {
+  document.getElementById('res').innerHTML += digit;
 };
 
 function setEq() {
-  const opOne = parseInt(buffer, 2);
-  const opTwo = parseInt(document.getElementById('res').innerHTML, 2);
-  switch (mode) {
-    case opMode.ADDITION:
-      let sum = opOne + opTwo;
-      document.getElementById('res').innerHTML = sum.toString(2);
-    case opMode.SUBTRACTION:
-    //stub
-    case opMode.MULTIPLICATION:
-    //stub
-    case opMode.DIVISION:
-    //stub
+  const scrn = document.getElementById('res').innerHTML;
+  const regex = /(0|1)+/g;
+  const found = scrn.match(regex);
+  let operand1 = parseInt(found[0],2);
+  let operand2 = parseInt(found[1],2);
+  let operator =scrn.match(/(\+|-|\*|\/)/g)[0];
+
+  let display = operand1 + operator + operand2;
+  let decAns = 0;
+  switch(operator){
+    case '+':
+      decAns = operand1+operand2;
+      break;
+  }
+  document.getElementById('res').innerHTML = decAns.toString(2);
   };
-};
-//for testing
-export { putOne, putZero, setAdd, setEq, clear, message };
+
+//for testing, remember to toggle
+//export { putOne, putZero, setEq, clearField, putAdd};
