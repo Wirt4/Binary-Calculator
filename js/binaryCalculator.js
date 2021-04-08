@@ -1,14 +1,17 @@
 "use strict";
+
+import { TestScheduler } from "@jest/core";
+
 //verbose, but makes for easier clickl listens in html
-function putMinus(){
+function putMinus() {
   put("-");
 };
 
-function putDiv(){
+function putDiv() {
   put("/");
 };
 
-function putMul(){
+function putMul() {
   put("*");
 }
 
@@ -34,34 +37,26 @@ function clearField() {
 
 function setEq() {
   const scrn = document.getElementById('res').innerHTML;
-  const regex = /(0|1)+/g;
-  const found = scrn.match(regex);
-  let operand1 = parseInt(found[0],2);
-  let operand2 = parseInt(found[1],2);
-  let operator =scrn.match(/(\+|-|\*|\/)/g)[0];
-
-  let decAns = "";
-  switch(operator){
-    case '/':
-      if (operand2>0){
-        decAns = Math.floor(operand1/operand2);
-      }
-    break;
-    case '+':
-      decAns = operand1+operand2;
-      break;
-    case '*':
-      decAns = operand1 * operand2;
-      break;
-    case '-':
-      if(operand1>=operand2){
-        decAns = operand1-operand2;
-      }
-    default:
-      break;
-  }
-  document.getElementById('res').innerHTML = decAns.toString(2);
+  const valRgx = /^[01]+[+-\/*][01]+$/g;
+  const valNum = /^[10]*$/g;
+  if (valRgx.test(scrn)) {
+    const parseRgx = /(0|1)+/g;
+    const found = scrn.match(parseRgx);
+    let operator = scrn.match(/[+-\/*]/g)[0];
+    document.getElementById('res').innerHTML = binaryMath(found[0], found[1], operator);
+  } else if (!valNum.test(scrn)) {
+    document.getElementById('res').innerHTML = "";
   };
+};
+//takes in two strings and an operator and returns the result
+function binaryMath(bin1, bin2, op) {
+  let dec1 = parseInt(bin1, 2);
+  let dec2 = parseInt(bin2, 2);
+  if ((op == '-' && dec2 > dec1) || op == '/' && dec2 == 0) return '';
+  return Math.floor(eval(dec1 + op + dec2)).toString(2);
+};
+
+
 
 //for testing, remember to toggle
-export { putOne, putZero, setEq, clearField, putAdd, putDiv, putMul, put, putMinus};
+//export { putOne, putZero, setEq, clearField, putAdd, putDiv, putMul, put, putMinus, binaryMath };

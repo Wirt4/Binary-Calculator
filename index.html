@@ -9,14 +9,14 @@
     <body>
         <div id = 'res' class='resClass'></div>
         <div id = 'btns'>
-            <button id='btn0' class='digitClass'>0</button>
-            <button id='btn1' class='digitClass'>1</button>
-            <button id='btnClr' class='clearOrEqualClass'>C</button>
-            <button id='btnEql' class='clearOrEqualClass'>=</button>
-            <button id='btnSum' class='mathOperatorsClass'>+</button>
-            <button id='btnSub' class='mathOperatorsClass'>-</button>
-            <button id='btnMul' class='mathOperatorsClass'>*</button>
-            <button id='btnDiv' class='mathOperatorsClass'>/</button>
+            <button id='btn0' class='digitClass' onclick="binaryCalculator: putZero();">0</button>
+            <button id='btn1' class='digitClass' onclick="binaryCalculator: putOne();">1</button>
+            <button id='btnClr' class='clearOrEqualClass' onclick="binaryCalculator: clearField();">C</button>
+            <button id='btnEql' class='clearOrEqualClass' onclick="binaryCalculator: setEq();">=</button>
+            <button id='btnSum' class='mathOperatorsClass' onclick="binaryCalculator: putAdd();">+</button>
+            <button id='btnSub' class='mathOperatorsClass' onclick= "binaryCalculator: putMinus()">-</button>
+            <button id='btnMul' class='mathOperatorsClass' onclick="binaryCalculator: putMul()">*</button>
+            <button id='btnDiv' class='mathOperatorsClass' onclick="binaryCalculator: putDiv();">/</button>
         </div>
 
     </body>

@@ -1,48 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617771691587" clover="3.2.0">
-  <project timestamp="1617771691590" name="All files">
-    <metrics statements="39" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="8" coveredmethods="7" elements="53" coveredelements="36" complexity="0" loc="39" ncloc="39" packages="1" files="1" classes="1"/>
+<coverage generated="1617859616499" clover="3.2.0">
+  <project timestamp="1617859616499" name="All files">
+    <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="10" coveredmethods="10" elements="42" coveredelements="42" complexity="0" loc="22" ncloc="22" packages="1" files="1" classes="1"/>
     <file name="binaryCalculator.js" path="/Users/wirtsalthouse/JSProjects/HackerRank10Days/Binary-Calculator/Binary-Calculator/js/binaryCalculator.js">
-      <metrics statements="39" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="8" coveredmethods="7"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="7" count="0" type="stmt"/>
-      <line num="8" count="0" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
-      <line num="10" count="0" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="12" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
-      <line num="16" count="0" type="stmt"/>
-      <line num="17" count="0" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
-      <line num="19" count="0" type="stmt"/>
-      <line num="20" count="0" type="stmt"/>
-      <line num="21" count="0" type="stmt"/>
-      <line num="22" count="0" type="stmt"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="28" count="1" type="stmt"/>
-      <line num="29" count="1" type="stmt"/>
-      <line num="30" count="1" type="stmt"/>
-      <line num="36" count="1" type="stmt"/>
-      <line num="40" count="17" type="stmt"/>
-      <line num="44" count="9" type="stmt"/>
-      <line num="48" count="26" type="cond" truecount="2" falsecount="0"/>
-      <line num="49" count="2" type="stmt"/>
-      <line num="50" count="2" type="stmt"/>
-      <line num="52" count="26" type="stmt"/>
-      <line num="56" count="1" type="stmt"/>
-      <line num="60" count="3" type="stmt"/>
-      <line num="61" count="3" type="stmt"/>
-      <line num="62" count="3" type="stmt"/>
-      <line num="66" count="2" type="stmt"/>
-      <line num="67" count="2" type="stmt"/>
-      <line num="68" count="2" type="stmt"/>
-      <line num="72" count="2" type="stmt"/>
-      <line num="73" count="2" type="stmt"/>
-      <line num="74" count="2" type="cond" truecount="4" falsecount="0"/>
-      <line num="76" count="2" type="stmt"/>
-      <line num="77" count="2" type="stmt"/>
+      <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="10" coveredmethods="10"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="19" count="36" type="stmt"/>
+      <line num="23" count="18" type="stmt"/>
+      <line num="27" count="3" type="stmt"/>
+      <line num="31" count="64" type="stmt"/>
+      <line num="35" count="3" type="stmt"/>
+      <line num="39" count="15" type="stmt"/>
+      <line num="40" count="15" type="stmt"/>
+      <line num="41" count="15" type="stmt"/>
+      <line num="42" count="15" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="13" type="stmt"/>
+      <line num="44" count="13" type="stmt"/>
+      <line num="45" count="13" type="stmt"/>
+      <line num="46" count="13" type="stmt"/>
+      <line num="47" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="48" count="1" type="stmt"/>
+      <line num="53" count="21" type="stmt"/>
+      <line num="54" count="21" type="stmt"/>
+      <line num="55" count="21" type="cond" truecount="6" falsecount="0"/>
+      <line num="56" count="17" type="stmt"/>
     </file>
   </project>
 </coverage>
