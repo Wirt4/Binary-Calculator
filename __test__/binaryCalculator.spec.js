@@ -115,6 +115,18 @@ describe(" hitting equality with bad inputs", ()=>{
     setEq();
     expect(scrn.innerHTML).toBe('111000');
   });
+  test(" all zeros", ()=>{
+    document.body.innerHTML="<div id='res'>000000</div>";
+    const scrn = document.getElementById('res');
+    setEq();
+    expect(scrn.innerHTML).toBe('0');
+  });
+  test("leading zeros", ()=>{
+    document.body.innerHTML="<div id='res'>0000010</div>";
+    const scrn = document.getElementById('res');
+    setEq();
+    expect(scrn.innerHTML).toBe('10');
+  });
 });
 describe("Addition mimicking button presses as much as possible", () => {
   test("adding two and two ", () => {

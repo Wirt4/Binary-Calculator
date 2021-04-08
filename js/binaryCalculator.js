@@ -1,8 +1,5 @@
 "use strict";
 
-import { TestScheduler } from "@jest/core";
-
-//verbose, but makes for easier clickl listens in html
 function putMinus() {
   put("-");
 };
@@ -39,12 +36,18 @@ function setEq() {
   const scrn = document.getElementById('res').innerHTML;
   const valRgx = /^[01]+[+-\/*][01]+$/g;
   const valNum = /^[10]*$/g;
+  const oopsAllZeros = /^0+$/g;
   if (valRgx.test(scrn)) {
-    const parseRgx = /(0|1)+/g;
+    const parseRgx = /([01])+/g;
     const found = scrn.match(parseRgx);
     let operator = scrn.match(/[+-\/*]/g)[0];
     document.getElementById('res').innerHTML = binaryMath(found[0], found[1], operator);
-  } else if (!valNum.test(scrn)) {
+  }else if(oopsAllZeros.test(scrn)){
+    document.getElementById('res').innerHTML = "0";
+  } else if (valNum.test(scrn)) {
+    const num = parseInt(scrn);
+    document.getElementById('res').innerHTML = num.toString(10);
+  }else{
     document.getElementById('res').innerHTML = "";
   };
 };
